@@ -4,49 +4,69 @@ import java.util.Scanner;
 
 public class Ejercicio7 {
 	public static void main(String[] args) {
+
 		Scanner inp = new Scanner(System.in);
-		System.out.println("IMC - libras a kilos");
+		int intNum = 0;
+		String num = "";
+		boolean feliz = false;
+		boolean creciente = true;
 		
-		System.out.print("¿Cual es tu peso? (lb) ");
-		float peso = inp.nextFloat();
+		do {
+			System.out.print("Ingrese un numero de 4 cifras: ");
+
+			try {
+				intNum = inp.nextInt();
+				num = String.valueOf(intNum);
+				
+			} catch (Exception e) {
+				System.err.println("Solo debe ingresar numeros");
+
+			}
+			if (num.length() < 4) {
+				System.err.println("Rango de valor incorrecto");
+			}
+
+		} while (num.length() < 4);
+
 		
-		System.out.print("¿Cual es tu estatura? (cm) ");
-		float estatura = inp.nextFloat();
+		int primeros = Integer.parseInt(num.substring(0, 2));
+		int ultimos = Integer.parseInt(num.substring(num.length() - 2, num.length()));
+		System.out.println(primeros);
+		System.out.println(ultimos);
 
-		float estaturaCm = estatura/100;
-		float pesoKg = (float) (peso / 2.20462262);
-		float imc = pesoKg / (estaturaCm*estaturaCm);
-		
-		String result = "hola";
-		
-		if (imc < 16.0) {
-			result = "Criterio de ingreso.";
-		} else if((imc > 16.0) && (imc < 16.9)) {
-			result = "infrapeso";
-			
-		} else if((imc > 17.0) && (imc < 18.4)) {
-			result = "bajo peso";
-
-		} else if((imc > 18.5) && (imc < 24.9)) {
-			result = "peso normal";
-
-		} else if((imc > 25.0) && (imc < 29.9)) {
-			result = "sobrepeso";
-
-		} else if((imc > 30.0) && (imc < 39.9)) {
-			result = "obesidad premórbida";
-
-		} else if((imc > 40.0) && (imc < 45)) {
-			result = "obesidad mórbida";
-
-		} else if(imc > 45.0) {
-			result = "obesidad hipermórbida";
-
-		} else {
-			System.err.println("imc < 16.0: " + (imc < 16.0));
+		if (primeros > ultimos) {
+			feliz = true;
 		}
 		
-		System.out.println("Con un IMC de " + imc + " fue diacnosticad@ con: " + result + "\nSu peso en Kg es: " + pesoKg);
-		inp.close();
+		for (int i = 0; i < num.length() - 1; i++) {
+			if (num.charAt(i) > num.charAt(i + 1)) {
+				creciente = false;
+			}
+		}
+		
+		if (feliz && creciente) {
+			System.out.println("El numero es muy feliz");
+		} else if (feliz) {
+			System.out.println("El numero es feliz");
+		} else if (creciente) {
+			System.out.println("El numero es creciente");
+		} else {
+			System.out.println("El numero es infeliz");
+		}
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

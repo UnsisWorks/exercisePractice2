@@ -1,5 +1,28 @@
 package condicionales;
 
-public class Ejercicio8 {
+import java.util.Scanner;
 
+public class Ejercicio8 {
+	public static void main(String[] args) {
+		Scanner inp = new Scanner(System.in);
+		System.out.println("Intervalos");
+		
+		System.out.print("Valor inicial: ");
+		float x = inp.nextFloat();
+		
+		System.out.print("Valor final: ");
+		float y= inp.nextFloat();
+		
+		System.out.print("Valor final: ");
+		float z = inp.nextFloat();
+		
+		if ((z >= x) && (z <= y)) {
+			System.out.println("Esta en el intervalo");
+		} else {
+			System.out.println("Esta fuera del intervalo");
+		}
+		
+		
+		inp.close();
+	}
 }
