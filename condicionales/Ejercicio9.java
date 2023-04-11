@@ -1,3 +1,9 @@
+/****************************
+ * @author Elietzer Jared Galicia Cordova
+ * Fecha de creación: 09/04/2023
+ * Fecha de modificación: 09/04/2023
+ * Descrpción: Minutis totales en un dia
+ *****************************************/
 package condicionales;
 
 import java.util.Scanner;

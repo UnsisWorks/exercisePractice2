@@ -1,3 +1,9 @@
+/****************************
+ * @author Elietzer Jared Galicia Cordova
+ * Fecha de creación: 09/04/2023
+ * Fecha de modificación: 09/04/2023
+ * Descrpción: Escribir el mes correspondiente
+ *****************************************/
 package condicionales;
 
 import java.util.Scanner;
@@ -79,6 +85,6 @@ public class Ejercicio6 {
 		}
 		
 		System.out.println("El mes es: " +  strMes);
-
+		inp.close();
 	}
 }

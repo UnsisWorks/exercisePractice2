@@ -1,3 +1,9 @@
+/****************************
+ * @author Elietzer Jared Galicia Cordova
+ * Fecha de creación: 09/04/2023
+ * Fecha de modificación: 09/04/2023
+ * Descrpción: Saber la filicidad de un numero
+ *****************************************/
 package condicionales;
 
 import java.util.Scanner;
@@ -53,7 +59,7 @@ public class Ejercicio7 {
 		} else {
 			System.out.println("El numero es infeliz");
 		}
-
+		inp.close();
 	}
 }
 
