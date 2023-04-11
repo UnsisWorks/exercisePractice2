@@ -1,3 +1,9 @@
+/****************************
+ * @author Elietzer Jared Galicia Cordova
+ * Fecha de creación: 09/04/2023
+ * Fecha de modificación: 09/04/2023
+ * Descrpción: Calcular el imc
+ *****************************************/
 package condicionales;
 
 import java.util.Scanner;
